@@ -237,11 +237,21 @@ function love.update(dt)
         player1.dy = 0
     end
 
+    --This is where I makde changes
+    -- Instead of checking if player 2 press up or down, 
+    --Have the programm to check the ball y value and match it with the player2's palldle's y value
+    --if love.keyboard.isDown('up') then
+    --    player2.dy = -PADDLE_SPEED
+    --elseif love.keyboard.isDown('down') then
+    --    player2.dy = PADDLE_SPEED
+    --else
+    --    player2.dy = 0
+    --end
     -- player 2
-    if love.keyboard.isDown('up') then
-        player2.dy = -PADDLE_SPEED
-    elseif love.keyboard.isDown('down') then
-        player2.dy = PADDLE_SPEED
+    if ball.y< player2.y then
+        player2.dy = -PADDLE_SPEED /1.2
+    elseif ball.y> player2.y then
+        player2.dy = PADDLE_SPEED /1.2
     else
         player2.dy = 0
     end
