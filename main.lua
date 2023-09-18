@@ -240,6 +240,9 @@ function love.update(dt)
     --This is where I makde changes
     -- Instead of checking if player 2 press up or down, 
     --Have the programm to check the ball y value and match it with the player2's palldle's y value
+    --if the ball's y value is lesser than the ai's paddles y value then move the ai's paddle downward until
+    -- they are equal
+    -- same way for the other way around
     --if love.keyboard.isDown('up') then
     --    player2.dy = -PADDLE_SPEED
     --elseif love.keyboard.isDown('down') then
